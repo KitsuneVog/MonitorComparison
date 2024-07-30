@@ -11,7 +11,7 @@ function myLoop() {
 		let diagonal_1 = document.getElementById('diagonal_1').value
 		let attitude = document.getElementById('attitude').value
 
-		let ratio = diagonal_0 / diagonal_1 - 1
+		let ratio = diagonal_1 * 100 / diagonal_0 / 100
 
 		document.body.style.cssText += `--ratio: ${ratio}`
 		document.body.style.cssText += `--Width: ${screenWidth}px`
