@@ -37,6 +37,16 @@ function myLoop() {
 
 		document.getElementById('display-1_text').innerHTML = diagonal_0 + '" ' + screenWidth + "x" + screenHeight + " размер:" + width_0 + "см " + height_0 + "см"
 		document.getElementById('display-2_text').innerHTML = diagonal_1 + '" ' + (screenWidth * ratio).toFixed(0) + "x" + (screenHeight * ratio).toFixed(0) + " размер:" + width_1 + "см " + height_1 + "см"
+		
+		console.log(diagonal_0, diagonal_1);
+
+		if (Number(diagonal_0) < Number(diagonal_1)) {
+			document.getElementById('display-2').style.width = "550px"
+			document.getElementById('display-2').style.height = "550px"
+
+			console.log("Основная диагональ меньше желаемой");
+			document.getElementById('display-2_text').innerHTML = "Основная диагональ меньше желаемой"
+		}
 
 		myLoop();
 	}, 100)
