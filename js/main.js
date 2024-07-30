@@ -11,36 +11,32 @@ function myLoop() {
 		let diagonal_1 = document.getElementById('diagonal_1').value
 		let attitude = document.getElementById('attitude').value
 
-		document.getElementById('display-1_text').innerHTML = diagonal_0
-		document.getElementById('display-2_text').innerHTML = diagonal_1
-
 		let ratio = diagonal_0 / diagonal_1 - 1
 
 		document.body.style.cssText += `--size: ${ratio}`
 		document.body.style.cssText += `--size-0: ${screenWidth}px`
 
-		if (i) {
-			let l = attitude.split(" ")
-			a = l[0]
-			b = l[1]
-			
-			let x = (diagonal_0 ** 2 / (a * 2 + b * 2)) ** 0.5
-
-			let width = a * x
-			let height = b * x
-
-			console.log(width, height);
-
-			x = (diagonal_1 ** 2 / (a * 2 + b * 2)) ** 0.5
-
-			width = a * x
-			height = b * x
-
-			console.log(width, height);
-
-			i = false
-		}
+		let l = attitude.split(" ")
+		a = l[0]
+		b = l[1]
 		
+		let x = (diagonal_0 ** 2 / (a * 2 + b * 2)) ** 0.5
+
+		let width_0 = (a * x).toFixed(2)
+		let height_0 = (b * x).toFixed(2)
+
+		console.log(width_0, height_0);
+
+		x = (diagonal_1 ** 2 / (a * 2 + b * 2)) ** 0.5
+
+		let width_1 = (a * x).toFixed(2)
+		let height_1 = (b * x).toFixed(2)
+
+		console.log(width_1, height_1);
+
+		document.getElementById('display-1_text').innerHTML = diagonal_0 + "   " + screenWidth + "x" + screenHeight + " размер:" + width_0 + "см " + height_0 + "см"
+		document.getElementById('display-2_text').innerHTML = diagonal_1 + " размер:" + width_1 + "см " + height_1 + "см"
+
 		myLoop();
 	}, 100)
 }
