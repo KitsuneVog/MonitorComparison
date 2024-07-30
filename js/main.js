@@ -13,8 +13,9 @@ function myLoop() {
 
 		let ratio = diagonal_0 / diagonal_1 - 1
 
-		document.body.style.cssText += `--size: ${ratio}`
-		document.body.style.cssText += `--size-0: ${screenWidth}px`
+		document.body.style.cssText += `--ratio: ${ratio}`
+		document.body.style.cssText += `--Width: ${screenWidth}px`
+		document.body.style.cssText += `--Height: ${screenHeight}px`
 
 		let l = attitude.split(" ")
 		a = l[0]
@@ -22,15 +23,15 @@ function myLoop() {
 		
 		let x = (diagonal_0 ** 2 / (a * 2 + b * 2)) ** 0.5
 
-		let width_0 = (a * x).toFixed(2)
-		let height_0 = (b * x).toFixed(2)
+		let width_0 = (a * x).toFixed(0)
+		let height_0 = (b * x).toFixed(0)
 
 		console.log(width_0, height_0);
 
 		x = (diagonal_1 ** 2 / (a * 2 + b * 2)) ** 0.5
 
-		let width_1 = (a * x).toFixed(2)
-		let height_1 = (b * x).toFixed(2)
+		let width_1 = (a * x).toFixed(0)
+		let height_1 = (b * x).toFixed(0)
 
 		console.log(width_1, height_1);
 

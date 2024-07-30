@@ -37,13 +37,13 @@ p {
 
 .display {
 	position: relative;
-	width: var(--size-0);
-	height: calc(var(--size-0) / 16*9);
+	width: var(--Width);
+	height: var(--Height);
 }
 .display-1 {
 	position: absolute;
-	width: var(--size-0);
-	height: calc(var(--size-0) / 16 * 9);
+	width: var(--Width);
+	height: var(--Height);
 	background-color: black;
 }
 .display-2 {
@@ -52,8 +52,8 @@ p {
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, 0);
-	width: calc(1920px - 1920px * var(--size));
-	height: calc(1080px - 1080px * var(--size));
+	width: calc(var(--Width) - var(--Width) * var(--ratio));
+	height: calc(var(--Height) - var(--Height) * var(--ratio));
 	background-color: blue;
 	z-index: 2;
 }
