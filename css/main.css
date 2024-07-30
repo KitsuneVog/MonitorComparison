@@ -43,7 +43,7 @@ p {
 .display-1 {
 	position: absolute;
 	width: var(--size-0);
-	height: calc(var(--size-0) / 16*9);
+	height: calc(var(--size-0) / 16 * 9);
 	background-color: black;
 }
 .display-2 {
