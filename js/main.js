@@ -1,19 +1,41 @@
-// let display_1 = document.getElementById('display-1')
-// let display_2 = document.getElementById('display-2')
+let screenWidth = screen.width
+let screenHeight = screen.height
 
+console.log(screenWidth + "x" + screenHeight);
 
+let i = true
 
 function myLoop() {
 	setTimeout(function() {
-		let size_0 = document.getElementById('size-0').value
-		let size_1 = document.getElementById('size-1').value
-		let size_2 = document.getElementById('size-2').value
+		let diagonal_0 = document.getElementById('diagonal_0').value
+		let diagonal_1 = document.getElementById('diagonal_1').value
 
-		document.body.style.cssText += `--size: ${size_1 / size_2 - 1}`
-		document.body.style.cssText += `--size-0: ${size_0}px`
+		document.getElementById('display-1_text').innerHTML = diagonal_0
+		document.getElementById('display-2_text').innerHTML = diagonal_1
+
+		let ratio = diagonal_0 / diagonal_1 - 1
+
+		document.body.style.cssText += `--size: ${ratio}`
+		document.body.style.cssText += `--size-0: ${screenWidth}px`
+
+		let n1 = screenWidth - screenWidth * ratio.toFixed(3)
+		let n2 = screenHeight - screenHeight * ratio.toFixed(3)
+		let resolution = n1 + " x " + n2
+
+		if (i) {
+			window.scrollTo({ top: 1000, behavior: 'smooth' });
+			console.log(resolution);
+			i = false
+		}
+
 
 		myLoop();
-	}, 300)
+	}, 100)
 }
 
 myLoop();
+
+
+
+// a^2 + b^2 == c^2
+

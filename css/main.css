@@ -20,18 +20,19 @@
 }
 
 .sizes {
-	position: absolute;
-	padding-top: 15px;
+	position: fixed;
+	padding-bottom: 15px;
 	margin-left: 15px;
+	bottom: 0;
 	z-index: 1000;
 }
 .sizes > * {
 	border-color: #EE82EE;
 	text-align: center;
 }
-.sizes > p {
+p {
 	font-size: 55px;
-	color: black;
+	color: chartreuse;
 }
 
 .display {
@@ -43,7 +44,7 @@
 	position: absolute;
 	width: var(--size-0);
 	height: calc(var(--size-0) / 16*9);
-	background-color: aqua;
+	background-color: black;
 }
 .display-2 {
 	position: absolute;
