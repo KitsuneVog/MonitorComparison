@@ -14,9 +14,12 @@ function myLoop() {
 		document.getElementById('display-1_text').innerHTML = diagonal_0
 		document.getElementById('display-2_text').innerHTML = diagonal_1
 
-		if (i) {
-			window.scrollTo({ top: 1000, behavior: 'smooth' });
+		let ratio = diagonal_0 / diagonal_1 - 1
 
+		document.body.style.cssText += `--size: ${ratio}`
+		document.body.style.cssText += `--size-0: ${screenWidth}px`
+
+		if (i) {
 			let l = attitude.split(" ")
 			a = l[0]
 			b = l[1]
@@ -35,14 +38,10 @@ function myLoop() {
 
 			console.log(width, height);
 
+			window.scrollTo({ top: 1000, behavior: 'smooth' });
 			i = false
 		}
-
-		let ratio = diagonal_0 / diagonal_1 - 1
-
-		document.body.style.cssText += `--size: ${ratio}`
-		document.body.style.cssText += `--size-0: ${screenWidth}px`
-
+		
 		myLoop();
 	}, 100)
 }
