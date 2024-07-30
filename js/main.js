@@ -36,7 +36,7 @@ function myLoop() {
 		console.log(width_1, height_1);
 
 		document.getElementById('display-1_text').innerHTML = diagonal_0 + '" ' + screenWidth + "x" + screenHeight + " размер:" + width_0 + "см " + height_0 + "см"
-		document.getElementById('display-2_text').innerHTML = diagonal_1 + '" ' + screenWidth * ratio + "x" + screenHeight * ratio + " размер:" + width_1 + "см " + height_1 + "см"
+		document.getElementById('display-2_text').innerHTML = diagonal_1 + '" ' + (screenWidth * ratio).toFixed(0) + "x" + (screenHeight * ratio).toFixed(0) + " размер:" + width_1 + "см " + height_1 + "см"
 
 		myLoop();
 	}, 100)
