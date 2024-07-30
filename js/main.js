@@ -46,6 +46,9 @@ function myLoop() {
 
 			console.log("Основная диагональ меньше желаемой");
 			document.getElementById('display-2_text').innerHTML = "Основная диагональ меньше желаемой"
+		} else {
+			document.getElementById('display-2').style.width = null
+			document.getElementById('display-2').style.height = null
 		}
 
 		myLoop();
