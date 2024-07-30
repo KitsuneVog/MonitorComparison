@@ -38,12 +38,16 @@ function myLoop() {
 
 			console.log(width, height);
 
-			window.scrollTo({ top: 1000, behavior: 'smooth' });
 			i = false
 		}
 		
 		myLoop();
 	}, 100)
 }
+
+function scroll() {
+  window.scrollTo({ top: 1000, behavior: 'smooth' });
+}
+setTimeout(scroll, 500);
 
 myLoop();
