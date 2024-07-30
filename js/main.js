@@ -47,4 +47,6 @@ function scroll() {
 }
 setTimeout(scroll, 500);
 
+window.onresize = function(){ location.reload(); }
+
 myLoop();
