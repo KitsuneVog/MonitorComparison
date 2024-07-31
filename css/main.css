@@ -54,6 +54,8 @@ p {
 	transform: translate(-50%, 0);
 	width: calc(var(--Width) * var(--ratio));
 	height: calc(var(--Height) * var(--ratio));
+	max-width: var(--Width);
+	max-height: var(--Height);
 	background-color: blue;
 	z-index: 2;
 	overflow: hidden;

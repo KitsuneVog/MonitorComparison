@@ -41,14 +41,8 @@ function myLoop() {
 		console.log(diagonal_0, diagonal_1);
 
 		if (Number(diagonal_0) < Number(diagonal_1)) {
-			document.getElementById('display-2').style.width = "550px"
-			document.getElementById('display-2').style.height = "550px"
-
-			console.log("Основная диагональ меньше желаемой");
-			document.getElementById('display-2_text').innerHTML = "Основная диагональ меньше желаемой"
-		} else {
-			document.getElementById('display-2').style.width = null
-			document.getElementById('display-2').style.height = null
+			console.log("!Основная диагональ меньше желаемой");
+			document.getElementById('display-2_text').innerHTML = "!Основная диагональ меньше желаемой"
 		}
 
 		myLoop();
