@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/JS-yellow)
 
 # MonitorComparison
-**[Сайт](kitsunevog.github.io/MonitorComparison)** - для сравнения диагонали/размеров мониторов
+**[Сайт](https://kitsunevog.github.io/MonitorComparison)** - для сравнения диагонали/размеров мониторов
 
 ## Интерфейс
 1. размер вашего монитора (в дюймах)
